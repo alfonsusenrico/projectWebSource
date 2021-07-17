@@ -1,0 +1,159 @@
+.delay-1200 {
+    transition-delay: 1200ms;
+}
+
+.delay-1400 {
+    transition-delay: 1400ms;
+}
+
+.delay-1600 {
+    transition-delay: 1600ms;
+}
+
+.delay-1800 {
+    transition-delay: 1800ms;
+}
+
+.delay-2000 {
+    transition-delay: 2000ms;
+}
+
+.delay-2200 {
+    transition-delay: 2200ms;
+}
+
+.delay-2500 {
+    transition-delay: 2500ms;
+}
+
+.delay-3000 {
+    transition-delay: 3000ms;
+}
+
+.delay-3500 {
+    transition-delay: 3500ms;
+}
+
+.click {
+    animation: click 2.0s infinite;
+}
+
+@keyframes click {
+    0%,100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.troll {
+    animation: bounce 0.4s infinite;
+}
+
+.component1 {
+    border-radius: 30px 30px 40px 15px;
+    transform: rotate(-10deg) skew(-30deg);
+}
+.component2 {
+    border-radius: 20px 100px 50px 40px;
+    transform: rotate(-10deg) skew(-30deg);
+}
+
+
+.component3 {
+    border-radius: 30px 30px 40px 15px;
+    transform: rotate(-10deg) skew(-30deg);
+}
+.component4 {
+    border-radius: 20px 100px 50px 40px;
+    transform: rotate(-10deg) skew(-30deg);
+}
+
+.helloLP {
+    animation: moveHP 0.7s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveTL {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(-210%, -470%) scale(0.5);
+    }
+}
+
+.helloDK {
+    animation: moveHP 0.7s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveHP {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(calc(-100hv)) scale(0.5);
+    }
+}
+
+.-translate-y {
+    --tw-translate-y: -30rem;
+}
+
+.cog1 {
+    animation: rspin 3.0s linear infinite;
+}
+
+.cog2 {
+    animation: lspin 3.0s linear infinite;
+}
+
+@keyframes rspin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes lspin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.rot90 {
+    animation: rotate90 2.0s infinite;
+}
+
+@keyframes rotate90 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.navButton {
+    @apply font-bold text-xl font-sans
+}
+
+.nextSection:hover a {
+    @apply text-blue-500
+}
+
+#container {
+    background-color: #010F14;
+}
+
+#home {
+    background-color: #011F28;
+}
+

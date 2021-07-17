@@ -1,0 +1,95 @@
+<!-- <div id="container" class="h-screen w-screen bg-black p-10">
+    <div id="content" class="h-full bg-black">
+        <div class="grid grid-cols-3 gap-4 h-full flex border-2">
+            <div id="greet" class="border-2 row row-span-3 text-white font-bold text-4xl sm:text-5xl xl:text-6xl font-sans">
+                <div #textGreet class="h-full">
+                    <p class="test">Hi!</p><br/>
+                    <p>We<a>l</a>c<a>o</a>me</p><br/>
+                    <p>My <a>n</a>ame is Alfonsus Enrico</p><br/>
+                    <p>I<a>t</a>'s nice having you h<a>e</a>re</p><br/>
+                    <p>I've got something for you</p>
+                </div>
+            </div>
+            <div class="border-2 col text-white font-bold text-4xl sm:text-5xl xl:text-7xl font-sans flex justify-center">
+                <h1 id="troll" class="troll self-center text-red-500"></h1>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="container" class="h-screen w-screen p-5">
+    <section id="home" class="h-full w-full rounded-3xl">
+        <div class="grid lg:grid-cols-7 gap-4 h-full w-full lg:pr-10">
+
+            <section id="navigation" class="grid hidden lg:block row-span-4 text-white h-2/5 self-center">
+                <div class="grid h-full w-full flex place-items-center">
+                    <div>
+                        <button class="navButton transition duration-500 ease-in-out border-b-2 border-transparent hover:border-blue-500 hover:rounded-b-xl">
+                            HOME
+                        </button>
+                    </div>
+                    <div>
+                        <button class="navButton transition duration-500 ease-in-out border-b-2 border-transparent hover:border-blue-500 hover:rounded-b-xl">
+                            ABOUT
+                        </button>
+                    </div>
+                    <div>
+                        <button class="navButton transition duration-500 ease-in-out border-b-2 border-transparent hover:border-blue-500 hover:rounded-b-xl">
+                            PROJECTS
+                        </button>
+                    </div>
+                    <!-- <div>
+                        <button class="navButton transition duration-500 ease-in-out border-b-2 border-transparent hover:border-blue-500 hover:rounded-b-xl">
+                            CONTACT ME
+                        </button>
+                    </div> -->
+                </div>
+            </section>
+
+            <section id="intro" class="grid hidden lg:block col-span-4 row-span-4 self-center">
+                <div class>
+                    <h1 class="text-white font-thin text-7xl font-sans text-right">Hello</h1>
+                    <h1 class="text-blue-400 font-light text-5xl font-sans text-right">I'm Alfonsus Enrico</h1><br/>
+                    <h1 class="text-white font-normal text-2xl font-sans text-right">Currently studied at Petra Christian University, majoring in Computer Science.</h1>
+                    <h1 class="text-white font-normal text-2xl font-sans text-right">My work focused on Mobile Apps Development.</h1>
+                    <h1 class="text-white font-normal text-2xl font-sans text-right">Will keep learning and productive further.</h1><br/><br/><br/>
+                </div>
+            </section>
+
+            <section id="photo1" class="grid col hidden lg:block col-span-2 row-span-4 self-center place-items-center">
+                <div class="flex items-center">
+                    <img src="http://103.161.184.37/portrait_edited_final.png">
+                </div>
+            </section>
+
+            <section id="footer" class="hidden lg:grid col col-span-7 self-center place-items-end">
+                <button class="nextSection font-semibold font-sans text-lg transition duration-500 ease-in-out opacity-50 text-blue-100 hover:text-white hover:opacity-100 transform hover:-translate-y-4 hover:-translate-x-4">
+                    next section: <a>ABOUT</a>
+                </button>
+            </section>
+
+            <!-- MOBILE -->
+            <div class="self-center lg:hidden">
+                <div class="flex justify-center">
+                    <img src="http://103.161.184.37/portrait_edited_final.png" class="h-1/2 w-1/2">
+                </div><br/>
+                <div class="text-white grid justify-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="cog1 h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="cog2 h-12 w-12 -ml-10 -mt-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div class="grid text-center">
+                    <h1 class="font-thin font-sans text-white text-4xl">Hi there!</h1><br/>
+                    <h1 class="font-thin font-sans text-white text-xl ">Looks like you're accessing my page from a mobile device <p class="inline-block animate-bounce">📱</p> or a portrait monitor<p class="rot90 inline-block"> 🖥️</p></h1><br/>
+                    <h1 class="font-thin font-sans text-white text-xl">Unfortunately my page is only accessible using landscape desktop browser at the moment😔</h1><br/>
+                    <h1 class="font-thin font-sans text-white text-xl">I'm currently working on this😉</h1><br/>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
