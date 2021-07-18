@@ -142,7 +142,11 @@
 }
 
 .navButton {
-    @apply font-bold text-xl font-sans
+    @apply font-bold text-sm font-sans
+}
+
+.navButton:hover {
+    text-transform: capitalize;
 }
 
 .nextSection:hover a {
@@ -154,6 +158,135 @@
 }
 
 #home {
-    background-color: #011F28;
+    background-image: linear-gradient(to bottom, #04204E, #021027);
 }
 
+.circle {
+    border-radius: 50%;
+}
+
+.startText h1{
+    opacity: 0;
+}
+
+.startText h1:nth-child(1) {
+    animation: showText .5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0ms;
+}
+
+.startText h1:nth-child(2) {
+    animation: showText .5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+
+.startText h1:nth-child(5) {
+    animation: showText .5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1000ms;
+}
+
+@keyframes showText {
+    from {
+        opacity: 0;
+        transform: translate(0px,10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, -10px);
+    } 
+}
+
+#footer {
+    opacity: 0;
+    animation: showFooter 1.0s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2000ms;
+}
+
+@keyframes showFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.right-38 {
+    right: 9.5rem;
+}
+
+.top-38 {
+    top: 9.5rem;
+}
+
+.right-62 {
+    right: 15.5rem;
+}
+
+.top-62 {
+    top: 15.5rem;
+}
+
+.right-86 {
+    right: 21.5rem;
+}
+
+.top-86 {
+    top: 21.5rem;
+}
+
+.opacity-15 {
+    opacity: 0.15;
+}
+
+.opacity-35 {
+    opacity: 0.35;
+}
+
+#bg {
+    background-attachment: fixed;
+    transform: translateX(2000px);
+}
+
+#bg div:nth-child(1){
+    background-color: #FFFFFF;
+    @apply opacity-10;
+}
+
+#bg div:nth-child(2){
+    background-color: #7A7A7A;
+    @apply opacity-15;
+}
+
+#bg div:nth-child(3){
+    background-color: #525252;
+    @apply opacity-20;
+}
+
+#bg div:nth-child(4){
+    background-color: #474747;
+    @apply opacity-35;
+}
+
+.fromRight {
+    animation: inRight 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes inRight {
+    from { 
+        opacity:0;
+        transform: translate(20px,0);
+    }
+    to {
+        opacity:100;
+        transform: translate(0,0);
+    }
+}
+
+.nav:hover .hiddenNav {
+    display: block;
+}

@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,14 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 })
 export class AppComponent {
 
-  @ViewChild("textGreet") parentRef: ElementRef<HTMLElement> | undefined;
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(e: any) {
+    console.log(e);
+    const el = document.getElementById('bg');
+    const x = (window.innerWidth + e.pageX*-7)/100;
+    const y = (window.innerHeight + e.pageY*-7)/100;
+    el!.style.transform = `translate(${x+2000}px, ${y}px)`;
+  }
 
   async ngAfterViewInit() {
     console.log(screen);
@@ -21,73 +28,6 @@ export class AppComponent {
     //   el.style.transform = "translateX(calc(100vw - 100%))";
     //   //el.style.left = "100%";
     // }
-  }
-
-  async hidden() {
-    const parent = this.parentRef?.nativeElement;
-    const length = this.parentRef?.nativeElement.childElementCount;
-    if(length != null) {
-      for(var i = 0;i<length;i++) {
-        const child = parent?.children[i] as HTMLElement;
-        const cLength = parent?.children[i].childElementCount;
-        for(var j = 0;j < cLength!; j++) {
-          const cChild = parent?.children[i].children[j] as HTMLElement;
-          cChild.style.visibility = "hidden";
-        }
-        child.style.visibility = "hidden";
-        const bChild = parent?.children[i] as HTMLElement;
-      }
-    }
-  }
-
-  async renderGreet() {
-    await this.sleep(2000);
-    const parent = this.parentRef?.nativeElement;
-    const length = this.parentRef?.nativeElement.childElementCount;
-    if(length != null) {
-      for(var i = 0;i<length;i++) {
-        const child = parent?.children[i] as HTMLElement;
-        const cLength = parent?.children[i].childElementCount;
-        for(var j = 0;j < cLength!; j++) {
-          const cChild = parent?.children[i].children[j] as HTMLElement;
-          cChild.style.visibility = "visible";
-        }
-        child.style.visibility = "visible";
-        await this.sleep(1000);
-        const bChild = parent?.children[i] as HTMLElement;
-        bChild.style.opacity = (0.5).toString();
-        await this.sleep(500);
-      }
-    }
-  }
-
-  async renderHiddenGreet() {
-
-    var trollMsg = '';
-
-    const parent = this.parentRef?.nativeElement;
-    const length = this.parentRef?.nativeElement.childElementCount;
-    const firstChild = parent?.firstChild as HTMLElement;
-    trollMsg += firstChild.innerHTML + " ";
-    firstChild.style.color = "red";
-    await this.sleep(1000);
-    if(length != null) {
-      for(var i = 0;i<length;i++) {
-        const cLength = parent?.children[i].childElementCount;
-        for(var j = 0;j<cLength!;j++) {
-          const cChild = parent?.children[i].children[j] as HTMLElement;
-          trollMsg += cChild.innerHTML;
-          cChild.style.opacity = (1).toString();
-          cChild.style.color = "red";
-          await this.sleep(1000);
-        }
-      }
-    }
-
-    const trollEl = document.getElementById("troll");
-    if(trollEl != null) {
-      trollEl.innerHTML = trollMsg;
-    }
   }
 
   async sleep(ms: number) {
