@@ -42,7 +42,7 @@ body {
     transform: translate(0, -50%);
 }
 
-#footer {
+#footer, header{
     opacity: 0;
     animation: showFooter 1.0s linear;
     animation-fill-mode: forwards;
@@ -100,12 +100,15 @@ body {
     visibility: visible;
 }
 
-.nextSection:hover a {
+.navSection:hover a {
     @apply text-blue-500
 }
 
 .nav:hover .hiddenNav {
     display: block;
+}
+
+.contact {
 }
 
 .contact:hover {
@@ -200,7 +203,8 @@ body {
     }
     to {
         opacity:100;
-        transform: translate(0,0);
+        transform: translate(0,0) scale(1.1);
+        
     }
 }
 

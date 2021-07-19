@@ -5,8 +5,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 ::-webkit-scrollbar {
     width:0;
