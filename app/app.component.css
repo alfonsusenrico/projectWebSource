@@ -1,105 +1,74 @@
-.delay-1200 {
-    transition-delay: 1200ms;
+/* COLOR PALLETTE */
+/* https://coolors.co/026c8d-29274c-073888-525252 */
+
+/* TAGS */
+body {
+    overflow: hidden;
 }
 
-.delay-1400 {
-    transition-delay: 1400ms;
+/* ID */
+#bg {
+    background-attachment: fixed;
+    transform: translateX(2000px);
 }
 
-.delay-1600 {
-    transition-delay: 1600ms;
+#bg div:nth-child(1){
+    background-color: #FFFFFF;
+    @apply opacity-10;
 }
 
-.delay-1800 {
-    transition-delay: 1800ms;
+#bg div:nth-child(2){
+    background-color: #7A7A7A;
+    @apply opacity-15;
 }
 
-.delay-2000 {
-    transition-delay: 2000ms;
+#bg div:nth-child(3){
+    background-color: #525252;
+    @apply opacity-20;
 }
 
-.delay-2200 {
-    transition-delay: 2200ms;
+#bg div:nth-child(4){
+    background-color: #474747;
+    @apply opacity-35;
 }
 
-.delay-2500 {
-    transition-delay: 2500ms;
+#container {
+    background-color: #010F14;
 }
 
-.delay-3000 {
-    transition-delay: 3000ms;
+#navigation {
+    top: 50%;
+    left: 2%;
+    transform: translate(0, -50%);
 }
 
-.delay-3500 {
-    transition-delay: 3500ms;
-}
-
-.click {
-    animation: click 2.0s infinite;
-}
-
-@keyframes click {
-    0%,100% {
-        opacity: 0.1;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
-.troll {
-    animation: bounce 0.4s infinite;
-}
-
-.component1 {
-    border-radius: 30px 30px 40px 15px;
-    transform: rotate(-10deg) skew(-30deg);
-}
-.component2 {
-    border-radius: 20px 100px 50px 40px;
-    transform: rotate(-10deg) skew(-30deg);
-}
-
-
-.component3 {
-    border-radius: 30px 30px 40px 15px;
-    transform: rotate(-10deg) skew(-30deg);
-}
-.component4 {
-    border-radius: 20px 100px 50px 40px;
-    transform: rotate(-10deg) skew(-30deg);
-}
-
-.helloLP {
-    animation: moveHP 0.7s linear;
+#footer {
+    opacity: 0;
+    animation: showFooter 1.0s linear;
     animation-fill-mode: forwards;
+    animation-delay: 2000ms;
 }
 
-@keyframes moveTL {
-    from {
-        transform: translate(0,0);
-    }
-    to {
-        transform: translate(-210%, -470%) scale(0.5);
-    }
+#home {
+    background-image: linear-gradient(to bottom, #052861, #021027);
 }
 
-.helloDK {
-    animation: moveHP 0.7s linear;
-    animation-fill-mode: forwards;
+#about {
+    background-image: linear-gradient(to bottom, #021027, #063074);
 }
 
-@keyframes moveHP {
-    from {
-        transform: translate(0,0);
-    }
-    to {
-        transform: translate(calc(-100hv)) scale(0.5);
-    }
+#projects {
+    background-image: linear-gradient(to bottom, #063074, #03183A);
 }
 
-.-translate-y {
-    --tw-translate-y: -30rem;
+/* CLASSES */
+
+.navActive {
+    @apply border-b-2 border-white w-3/4
+}
+
+.navInactive {
+    @apply border-b-2 border-white w-1/3
 }
 
 .cog1 {
@@ -110,59 +79,37 @@
     animation: lspin 3.0s linear infinite;
 }
 
-@keyframes rspin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes lspin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
-}
-
 .rot90 {
     animation: rotate90 2.0s infinite;
-}
-
-@keyframes rotate90 {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(90deg);
-    }
 }
 
 .navButton {
     @apply font-bold text-sm font-sans
 }
 
+.navButton .navText {
+    visibility: hidden;
+}
+
 .navButton:hover {
-    text-transform: capitalize;
+    visibility: hidden;
+}
+
+.navButton:hover .navText {
+    animation-fill-mode: both;
+    visibility: visible;
 }
 
 .nextSection:hover a {
     @apply text-blue-500
 }
 
-#container {
-    background-color: #010F14;
+.nav:hover .hiddenNav {
+    display: block;
 }
 
-#home {
-    background-image: linear-gradient(to bottom, #04204E, #021027);
-}
-
-.circle {
-    border-radius: 50%;
+.contact:hover {
+    @apply animate-bounce;
 }
 
 .startText h1{
@@ -185,33 +132,6 @@
     animation: showText .5s linear;
     animation-fill-mode: forwards;
     animation-delay: 1000ms;
-}
-
-@keyframes showText {
-    from {
-        opacity: 0;
-        transform: translate(0px,10px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0px, -10px);
-    } 
-}
-
-#footer {
-    opacity: 0;
-    animation: showFooter 1.0s linear;
-    animation-fill-mode: forwards;
-    animation-delay: 2000ms;
-}
-
-@keyframes showFooter {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .right-38 {
@@ -246,34 +166,31 @@
     opacity: 0.35;
 }
 
-#bg {
-    background-attachment: fixed;
-    transform: translateX(2000px);
-}
-
-#bg div:nth-child(1){
-    background-color: #FFFFFF;
-    @apply opacity-10;
-}
-
-#bg div:nth-child(2){
-    background-color: #7A7A7A;
-    @apply opacity-15;
-}
-
-#bg div:nth-child(3){
-    background-color: #525252;
-    @apply opacity-20;
-}
-
-#bg div:nth-child(4){
-    background-color: #474747;
-    @apply opacity-35;
-}
-
 .fromRight {
     animation: inRight 1.5s linear;
     animation-fill-mode: forwards;
+}
+
+/* KEYFRAMES */
+
+@keyframes showText {
+    from {
+        opacity: 0;
+        transform: translate(0px,10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, -10px);
+    } 
+}
+
+@keyframes showFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes inRight {
@@ -287,6 +204,29 @@
     }
 }
 
-.nav:hover .hiddenNav {
-    display: block;
+@keyframes lspin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rspin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate90 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
 }

@@ -3,12 +3,11 @@
 @import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
 
-body {
-    scroll-behavior: smooth;
-    background-color: black;
-}
-
 html {
     scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
 }
-
+::-webkit-scrollbar {
+    width:0;
+}
